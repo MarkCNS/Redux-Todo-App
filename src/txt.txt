@@ -1,0 +1,45 @@
+index.js
+
+
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import { store, persistor } from "./store";
+import { Provider } from "react-redux";
+import App from "./App";
+import { PersistGate } from "redux-persist/integration/react";
+const rootElement = document.getElementById("root");
+const root = createRoot(rootElement);
+root.render(
+  <StrictMode>
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <App />
+      </PersistGate>
+    </Provider>
+  </StrictMode>
+);
+
+
+store/index.js
+
+import { configureStore } from "@reduxjs/toolkit";
+import userSlice from "./reducers/userSlice";
+import { persistReducer } from "redux-persist";
+import storage from "redux-persist/lib/storage";
+import persistStore from "redux-persist/es/persistStore";
+const persistUserReducer = persistReducer(
+  {
+    key: "user",
+    storage
+  },
+  userSlice
+);
+
+export const store = configureStore({
+  reducer: {
+    user: persistUserReducer
+  }
+});
+
+export const persistor = persistStore(store);
+

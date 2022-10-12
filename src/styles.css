@@ -1,0 +1,115 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #d9afd9;
+  background-image: linear-gradient(0deg, #d9afd9 0%, #97d9e1 100%);
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  height: 97vh;
+}
+
+.Container {
+  background: #fff;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  max-width: 100%;
+  width: 400px;
+  padding: 10px 50px;
+}
+
+.form-input {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+input {
+  margin-right: 15px;
+  padding: 0px 10px;
+  height: 34px;
+  border-radius: 5px;
+  flex-grow: 1;
+  border: 1px solid grey;
+}
+
+::placeholder {
+  color: lightgrey;
+  letter-spacing: 0.05rem;
+}
+
+.todos {
+  padding: 0px;
+}
+
+.grid {
+  display: flex;
+  justify-content: space-between;
+  /* flex-wrap: wrap; */
+  /* overflow: hidden; */
+  align-items: center;
+  margin: 15px 0px;
+  border-radius: 5px;
+  background-color: #f2f7f4;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  padding: 10px;
+}
+
+.content {
+  text-align: left;
+  letter-spacing: 0.05rem;
+  inline-size: 80%;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.form button {
+  border-radius: 5px;
+  border: 0px;
+  color: #fff;
+  background-color: #0dcaf0;
+  cursor: pointer;
+  height: 36px;
+  width: 80px;
+}
+
+.close {
+  border-radius: 5px;
+  border: 0px;
+  color: #fff;
+  background-color: lightsalmon;
+  cursor: pointer;
+  height: 30px;
+  width: 60px;
+}
+
+.noTasks {
+  padding: 20px;
+}
+
+.todo-clear {
+  display: flex;
+  margin-top: 50px;
+}
+.todo-clear p {
+  flex-grow: 1;
+  text-align: left;
+  letter-spacing: 0.03rem;
+  font-size: 12px;
+}
+.todo-clear button {
+  border-radius: 5px;
+  border: 0px;
+  color: #fff;
+  background-color: lightcoral;
+  cursor: pointer;
+  height: 35px;
+  width: 80px;
+}
